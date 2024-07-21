@@ -20,6 +20,7 @@ module.exports = {
       crypto: require.resolve('crypto-browserify'),
     },
   },
+  devtool: 'eval-source-map',
   module: {
     rules: [
       {

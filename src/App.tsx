@@ -3,6 +3,7 @@ import { RouterProvider } from 'react-router-dom'
 import router from './config/router'
 
 const App: React.FC = () => {
+  console.log(1111111)
   return (
     <div>
       <h1>我是Header</h1>
