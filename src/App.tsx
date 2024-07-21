@@ -1,9 +1,13 @@
 import React from 'react'
+import { RouterProvider } from 'react-router-dom'
+import router from './config/router'
 
 const App: React.FC = () => {
   return (
     <div>
-      <h1>asd </h1>React18 + TypeScript
+      <h1>我是Header</h1>
+      <RouterProvider router={router} />
+      <h1>我是Footer</h1>
     </div>
   )
 }
