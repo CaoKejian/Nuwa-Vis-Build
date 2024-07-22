@@ -3,6 +3,7 @@ import { createHashRouter, Navigate } from'react-router-dom'
 import Home from '../views/Home'
 import MySelf from '../views/MySelf'
 import ErrorPage from '../views/ErrorPage'
+import Build from '../views/Build'
 
 const router = createHashRouter([
   {
@@ -16,6 +17,10 @@ const router = createHashRouter([
   {
     path: '/myself',
     element: <MySelf />,
+  }, 
+  {
+    path: '/build',
+    element: <Build />,
   }, 
   {
     path: '*',

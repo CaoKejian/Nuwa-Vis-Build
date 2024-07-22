@@ -5,8 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="../public/favicon.ico" />
   <title>女娲</title>
+  <style>
+    html {
+      font-size: 16px;
+    }
+  </style>
 </head>
 <body>
+  <script>
+    function setRemSize() {
+      var docEl = document.documentElement;
+      var clientWidth = docEl.clientWidth;
+      docEl.style.fontSize = clientWidth / 1920 * 16 + 'px';
+    }
+
+    window.onload = function () {
+      // setRemSize();
+    }
+
+    window.onresize = function () {
+      // setRemSize();
+    }
+  </script>
   <div id="root"></div>
 </body>
 </html>
