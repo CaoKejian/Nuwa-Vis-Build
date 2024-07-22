@@ -31,7 +31,6 @@ module.exports = {
             allowTsInNodeModules: true,
           },
         },
-        exclude: /node_modules\/(?!(@caokejian\nuwa-components)\/).*/,
       },
       {
         test: /\.html$/,
@@ -45,7 +44,7 @@ module.exports = {
             loader: 'css-loader',
             options: {
               modules: {
-                  localIdentName: '[local]--[hash:base64:5]',
+                  localIdentName: '[local]-[hash:base64:5]',
                 },
             },
           },
@@ -57,9 +56,11 @@ module.exports = {
               },
             },
           },
-          'less-loader',
+          {
+            loader: 'less-loader',
+            options: {},
+          }
         ],
-        exclude: /node_modules\/(?!(@caokejian\nuwa-components)\/).*/,
       },
     ]
   },

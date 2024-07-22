@@ -1,0 +1,28 @@
+.wrapper{
+  color: #fff;
+  display: flex;
+}
+.bread {
+  font-size: 14px;
+  display: flex;
+  .active, .static, span{
+    max-width: 100px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    cursor: pointer;
+  }
+  .active {
+    color: #fff;
+    opacity: 1;
+  }
+  .static {
+    margin-right: 4px;
+    opacity: .5;
+    cursor: pointer;
+  }
+  >span {
+    margin-right: 4px;
+    opacity: .5;
+  }
+}

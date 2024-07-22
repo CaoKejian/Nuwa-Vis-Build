@@ -22,7 +22,8 @@
     "css-minimizer-webpack-plugin": "^7.0.0",
     "events": "^3.3.0",
     "less": "^4.2.0",
-    "react-router-dom": "6.4.0"
+    "react-router-dom": "6.4.0",
+    "tdesign-react": "^1.7.7"
   },
   "devDependencies": {
     "@babel/core": "^7.24.7",
