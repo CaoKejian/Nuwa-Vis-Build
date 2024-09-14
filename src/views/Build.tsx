@@ -1,15 +1,17 @@
-import React, { memo } from 'react'
+import React, { memo, useState } from 'react'
 import type { FC } from 'react'
 import Header from '../share/Header'
-import Component from '../share/Components'
+import MenuContent from '../share/MenuContent'
 import * as s from './Build.less'
 
 const Build: FC = () => {
+  const [tabId, setTabId] = useState('basic')
+
   return (
-    <div>
-      <Header />
+    <div className={s.wrapper}>
+      <Header changeTab={(id: string) => setTabId(id)}/>
       <div className={s.content}>
-        <Component />
+        <MenuContent tabId={tabId}/>
       </div>
     </div>
   )

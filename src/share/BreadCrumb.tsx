@@ -33,7 +33,7 @@ const BreadCrumbItem: FC<ItemProps> = ({ bread }) => {
     <div className={s.bread}>
       <div className={bread.current ? s.active : s.static} onClick={() => goTo(bread?.path)}>{bread?.name}</div>
       {bread?.next ?
-        <span>{'>'}</span> : <div>复制</div>
+        <span>{'>'}</span> : <div>　复制</div>
       }
     </div>
   )

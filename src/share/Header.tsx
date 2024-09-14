@@ -2,23 +2,24 @@ import React, { memo } from 'react'
 import type { FC, ReactNode } from 'react'
 import * as s from './Header.module.less'
 import BreadCrumb from './BreadCrumb'
-import SvgIcon from './SvgIcon'
+import Tabs from './Tabs'
 
 interface IProps {
   children?: ReactNode
+  changeTab: (id: string) => void
 }
 
-const Header: FC<IProps> = () => {
+const Header: FC<IProps> = ({changeTab}) => {
 
   const breadArr: { name: string, path: string, current: boolean, next: number | null }[] = [
     {
-      name: '拉桌落地页',
+      name: 'H5落地页',
       path: '/',
       next: 1,
       current: false,
     },
     {
-      name: '个性化搭建xxxxxxxxx',
+      name: '个性化搭建页面',
       path: '/base',
       next: 2,
       current: false,
@@ -31,6 +32,14 @@ const Header: FC<IProps> = () => {
       current: true,
     }
   ]
+  const tabs = [
+    { id: 'basic', icon: 'basic', label: '基础配置' },
+    { id: 'put', icon: 'put', label: '投放管理' },
+    { id: 'bigdata', icon: 'bigdata', label: '数据分析' },
+  ]
+  const handleTabClick = (id: string) => {
+    changeTab(id)
+  }
   return (
     <div className={s.wrapper}>
       <div className={s.wrapper_left}>
@@ -40,20 +49,7 @@ const Header: FC<IProps> = () => {
       <div className={s.wrapper_middle}>
         <div></div>
         <div className={s.wrapper_middle_set}>
-          <ul>
-            <li>
-              <SvgIcon svgName='basic'/>
-              <div>基础配置</div>
-            </li>
-            <li>
-              <SvgIcon svgName='put'/>
-              <div>投放管理</div>
-            </li>
-            <li>
-              <SvgIcon svgName='bigdata'/>
-              <div>数据分析</div>
-            </li>
-          </ul>
+          <Tabs tabs={tabs} onTabClick={handleTabClick}/>
         </div>
       </div>
       <div className={s.wrapper_right}>colinccao</div>

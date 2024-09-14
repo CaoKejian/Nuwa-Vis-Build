@@ -1,7 +1,11 @@
 import React, { FC, memo } from "react"
-import * as s from "./components.module.less"
+import * as s from "./MenuContent.module.less"
 
-const Components: FC = () => {
+interface IProps {
+  tabId: string
+}
+
+const MenuContent: FC<IProps> = ({ tabId }) => {
   const list = [
     {
       name: '按钮组件',
@@ -16,9 +20,9 @@ const Components: FC = () => {
   ]
   return (
     <div className={s.wrapper}>
-
+      {tabId}
     </div>
   )
 }
 
-export default memo(Components)
+export default memo(MenuContent)
