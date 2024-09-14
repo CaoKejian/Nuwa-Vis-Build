@@ -2,6 +2,7 @@ import React, { memo } from 'react'
 import type { FC, ReactNode } from 'react'
 import * as s from './Header.module.less'
 import BreadCrumb from './BreadCrumb'
+import SvgIcon from './SvgIcon'
 
 interface IProps {
   children?: ReactNode
@@ -36,8 +37,26 @@ const Header: FC<IProps> = () => {
         <span>拉桌落地页</span>
         <BreadCrumb breadArr={breadArr} />
       </div>
-      <div className={s.wrapper_middle}>基础信息</div>
-      <div className={s.wrapper_right}>我</div>
+      <div className={s.wrapper_middle}>
+        <div></div>
+        <div className={s.wrapper_middle_set}>
+          <ul>
+            <li>
+              <SvgIcon svgName='basic'/>
+              <div>基础配置</div>
+            </li>
+            <li>
+              <SvgIcon svgName='put'/>
+              <div>投放管理</div>
+            </li>
+            <li>
+              <SvgIcon svgName='bigdata'/>
+              <div>数据分析</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div className={s.wrapper_right}>colinccao</div>
     </div>
   )
 }

@@ -6,7 +6,7 @@
     "preinstall": "npx only-allow pnpm",
     "lint": "eslint --fix \"./src/**/*.{js,jsx,ts,tsx}\"",
     "format": "prettier --write \"src/**/*.+(js|ts|jsx|tsx)\"",
-    "dev": "webpack serve --open --config build/webpack.dev.js",
+    "dev": "webpack serve --config build/webpack.dev.js",
     "build": "pnpm webpack --config build/webpack.prod.js"
   },
   "engines": {
@@ -18,6 +18,7 @@
   "license": "ISC",
   "description": "女娲-可视化构建",
   "dependencies": {
+    "@types/webpack-env": "^1.18.5",
     "axios": "^1.7.2",
     "css-minimizer-webpack-plugin": "^7.0.0",
     "events": "^3.3.0",
@@ -31,6 +32,7 @@
     "@babel/preset-react": "^7.24.7",
     "@babel/preset-typescript": "^7.24.7",
     "@eslint/js": "^9.2.0",
+    "@svgr/webpack": "^8.1.0",
     "@types/node": "^20.14.2",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
@@ -56,6 +58,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "style-loader": "^4.0.0",
+    "svg-sprite-loader": "^6.0.11",
     "ts-loader": "^9.5.1",
     "typescript": "^5.4.5",
     "typescript-eslint": "^7.8.0",

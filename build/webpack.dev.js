@@ -62,6 +62,19 @@ module.exports = {
           }
         ],
       },
+      {
+        test: /\.(eot|ttf|woff|woff2?)$/,
+        exclude: path.resolve(__dirname, '../src/assets/icons'),
+        type: 'asset/resource'
+      },
+      {
+          test: /\.svg$/,
+          loader: 'svg-sprite-loader',
+          include: path.resolve(__dirname, '../src/assets/icons'),  
+          options: {
+              symbolId: 'icon-[name]'
+          }
+      }
     ]
   },
   plugins: [
@@ -80,6 +93,7 @@ module.exports = {
       directory: path.resolve(__dirname, 'dist')
     },
     compress: true,
-    port: 9000
+    port: 9000,
+    open: false
   }
 };
