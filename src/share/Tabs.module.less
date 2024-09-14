@@ -12,7 +12,29 @@ li:hover {
   border-right: 7px solid transparent;
   border-bottom: 14px solid #fff;
 }
+
 .triangle {
   position: absolute;
   top: 68px;
+  z-index: 99;
+  opacity: 1;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.triangle-enter {
+  opacity: 0;
+}
+
+.triangle-enter-active {
+  opacity: 1;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.triangle-exit {
+  opacity: 1;
+}
+
+.triangle-exit-active {
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
 }
