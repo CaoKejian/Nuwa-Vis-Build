@@ -15,6 +15,7 @@
       border-radius: 24px;
       position: relative;
       .content {
+        cursor: pointer;
         width: 100%;
         height: 100%;
         border-radius: 16px;
@@ -37,9 +38,31 @@
           height: auto;
         }
       }
+      .content::-webkit-scrollbar {
+        width: 0;
+      }
     }
   }
   .right {
     flex: 1;
+    padding: 24px 0;
+    font-size: 18px;
+    color: var(--font-color-1);
+    font-family: jetbrains-mono;
+    .btn {
+      display: flex;
+      justify-content: flex-end;
+      .create {
+        margin-right: 6px;
+      }
+      .createIcon {
+        width: 16px;
+        height: 16px;
+      }
+    }
   }
+}
+
+.enter {
+  margin-right: 6px;
 }

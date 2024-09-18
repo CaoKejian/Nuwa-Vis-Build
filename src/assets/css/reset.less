@@ -41,3 +41,40 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+/* 
+* 全局设置样式
+*/
+:global {
+  .t-button {
+    background: var(--main-bg) !important;
+    border-color: var(--main-bg) !important;
+    --ripple-color: var(--main-button-clicked) !important;
+  }
+  .t-button-delete {
+    background: var(--btn-danger) !important;
+    border-color: var(--btn-danger) !important;
+    --ripple-color: var(--btn-danger-clicked) !important;
+  }
+  .t-pagination__number.t-is-current, .t-pagination__number:active {
+    background: var(--main-bg);
+    border-color: var(--main-bg);
+  }
+  .t-pagination__number:not(.t-is-current):hover {
+    border-color: var(--main-bg);
+    color: var(--main-bg);
+  }
+  .t-input:hover {
+    border-color: var(--main-bg);
+  }
+  .t-select-option.t-is-selected:not(.t-is-disabled) {
+    color: var(--main-bg);
+  }
+  .t-select-option:not(.t-is-selected):hover {
+    background: var(--main-bg) !important;
+  }
+  .t-input--focused {
+    border-color: var(--main-bg);
+    box-shadow: 0 0 2px 0 var(--main-bg);
+  }
+}
