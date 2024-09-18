@@ -2,9 +2,7 @@
   "compilerOptions": {
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
-    "target": "es5",
     "module": "es2020",
-    "lib": ["dom", "es2015"],
     "jsx": "react",
     "strict": true,
     "esModuleInterop": true,
@@ -16,7 +14,13 @@
     "baseUrl": "./",
     "paths": {
       "*": ["src/@types", "node_modules/@types/*"]
-    }
+    },
+    "noImplicitAny": true,
+    "target": "es6",
+    "lib": ["dom", "es6"],
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true
   },
   "include": ["src"]
 }

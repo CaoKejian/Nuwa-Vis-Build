@@ -3,13 +3,13 @@ import type { FC, ReactNode } from 'react'
 import * as s from './Header.module.less'
 import BreadCrumb from './BreadCrumb'
 import Tabs from './Tabs'
+import useTabStore from '../store/store'
 
 interface IProps {
   children?: ReactNode
-  changeTab: (id: string) => void
 }
 
-const Header: FC<IProps> = ({changeTab}) => {
+const Header: FC<IProps> = () => {
 
   const breadArr: { name: string, path: string, current: boolean, next: number | null }[] = [
     {
@@ -37,8 +37,10 @@ const Header: FC<IProps> = ({changeTab}) => {
     { id: 'put', icon: 'put', label: '投放管理' },
     { id: 'bigdata', icon: 'bigdata', label: '数据分析' },
   ]
+  const setTabId = useTabStore((state) => state.setTabId)
+
   const handleTabClick = (id: string) => {
-    changeTab(id)
+    setTabId(id)
   }
   return (
     <div className={s.wrapper}>

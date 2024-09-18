@@ -1,19 +1,14 @@
-import React, { memo, useState } from 'react'
-import type { FC } from 'react'
-import Header from '../share/Header'
-import * as s from './Build.less'
-import MenuCtx from '../component/MenuCtx'
+import React, { memo } from 'react'
+import type { FC, ReactNode } from 'react'
+import * as s from './Build.module.less'
 
-const Build: FC = () => {
-  const [tabId, setTabId] = useState('basic')
-  
+interface IProps {
+  children?: ReactNode
+}
+
+const Build: FC<IProps> = () => {
   return (
-    <div className={s.wrapper}>
-      <Header changeTab={(id: string) => setTabId(id)}/>
-      <div className={s.content}>
-        <MenuCtx tabId={tabId}/>
-      </div>
-    </div>
+    <div className={s.wrapper}>build</div>
   )
 }
 

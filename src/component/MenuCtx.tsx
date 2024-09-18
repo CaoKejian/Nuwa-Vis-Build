@@ -4,12 +4,12 @@ import Put from "./put"
 import Bigdata from "./bigdata"
 import * as s from './MenuCtx.module.less'
 import { Watermark } from "tdesign-react"
+import useTabStore from "../store/store"
 
-interface IProps {
-  tabId: string
-}
-const MenuCtx: FC<IProps> = ({ tabId }) => {
-  console.log(tabId)
+
+const MenuCtx: FC = () => {
+  const tabId = useTabStore((state) => state.tabId)
+
   const renderTabCtx = () => {
     switch (tabId) {
       case 'basic':
