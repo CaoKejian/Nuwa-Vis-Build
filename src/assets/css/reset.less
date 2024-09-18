@@ -56,6 +56,10 @@ table {
     border-color: var(--btn-danger) !important;
     --ripple-color: var(--btn-danger-clicked) !important;
   }
+  .t-button.t-is-disabled {
+    background: var(--main-button-danger-disabled) !important;;
+    border-color: var(--main-button-danger-disabled) !important;;
+  }
   .t-pagination__number.t-is-current, .t-pagination__number:active {
     background: var(--main-bg);
     border-color: var(--main-bg);
@@ -76,5 +80,8 @@ table {
   .t-input--focused {
     border-color: var(--main-bg);
     box-shadow: 0 0 2px 0 var(--main-bg);
+  }
+  .t-tag {
+    cursor: pointer;
   }
 }
